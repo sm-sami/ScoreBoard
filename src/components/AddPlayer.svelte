@@ -14,7 +14,7 @@
 
     const createNewPlayer = () => {
         PlayerStore.update((currentPlayers) => {
-            return [{name: player.name, points: player.points}, ...currentPlayers]
+            return [...currentPlayers, {name: player.name, points: player.points}]
         });
         isAddPlayerButtonPressed = !isAddPlayerButtonPressed;
     }
