@@ -19,7 +19,6 @@
 
 <style>
     .card {
-        margin: 50px 100px;
         padding: 10px 20px 20px;
         background-color: var(--color-primary);
         color: var(--text-color);

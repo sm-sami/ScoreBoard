@@ -25,14 +25,16 @@
     }
 
     .cards {
-        margin: 0 100px;
+        margin: 30px 0 80px;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        row-gap: 20px;
     }
 
     .info {
         display: flex;
         height: 80vh;
+        font-size: 12px;
         color: var(--text-color);
         justify-content: center;
         align-items: center;
@@ -40,10 +42,36 @@
 
     .info span {
         font-weight: bold;
-        font-size: 12px;
         background-color: var(--color-secondary);
         padding: 7px 10px;
         margin: 5px;
         border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+        .cards {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 60px;
+        }
+
+        .info {
+            font-size: 15px;
+        }
+
+        .info span {
+            font-size: 12px;
+        }
+    }
+
+    @media (min-width:1024px) {
+        .cards {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (min-width:1440px) {
+        .cards {
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
 </style>

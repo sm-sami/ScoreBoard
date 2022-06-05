@@ -12,11 +12,12 @@
         isAddPlayerButtonPressed = !isAddPlayerButtonPressed;
     }
 
-    const createNewPlayer = () => {
+    const createNewPlayer = (e) => {
         PlayerStore.update((currentPlayers) => {
             return [...currentPlayers, {name: player.name, points: player.points}]
         });
         isAddPlayerButtonPressed = !isAddPlayerButtonPressed;
+        e.preventDefault();
     }
 </script>
 
