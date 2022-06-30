@@ -1,5 +1,5 @@
 <script>
-    import Button from "./Button.svelte";
+    import { Button } from "./";
     import { PlayerStore } from "../stores";
 
     export let id = null;

@@ -1,6 +1,5 @@
 <script>
-    import AddPlayer from "./AddPlayer.svelte";
-    import ScoreCard from "./ScoreCard.svelte";
+    import { AddPlayer, ScoreCard } from "./";
     import { PlayerStore } from "../stores";
 
     $: playerCount = $PlayerStore.length

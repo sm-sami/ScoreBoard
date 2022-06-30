@@ -1,5 +1,5 @@
 <script>
-    import Button from "./Button.svelte";
+    import { Button } from "./";
     import { PlayerStore } from "../stores";
 
     let isAddPlayerButtonPressed = false;
@@ -18,6 +18,8 @@
             return [...currentPlayers, {id: $PlayerStore.length + 1, name: player.name, points: player.points}]
         });
         isAddPlayerButtonPressed = !isAddPlayerButtonPressed;
+        player.name = "";
+        player.points = 0;
         e.preventDefault();
     }
 </script>
