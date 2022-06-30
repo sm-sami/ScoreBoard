@@ -1,7 +1,7 @@
 <script>
     import AddPlayer from "./AddPlayer.svelte";
     import ScoreCard from "./ScoreCard.svelte";
-    import {PlayerStore} from "../stores";
+    import { PlayerStore } from "../stores";
 
     $: playerCount = $PlayerStore.length
 </script>
@@ -10,8 +10,8 @@
     <AddPlayer />
     {#if playerCount > 0}
         <div class="cards">
-            {#each $PlayerStore as player}
-                <ScoreCard name={player.name} points={player.points}/>
+            {#each $PlayerStore as player (player.id)}
+                <ScoreCard name={player.name} points={player.points} id={player.id} />
             {/each}
         </div>
     {:else}

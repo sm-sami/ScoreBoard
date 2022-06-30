@@ -1,9 +1,10 @@
 <script>
     import Button from "./Button.svelte";
-    import {PlayerStore} from "../stores";
+    import { PlayerStore } from "../stores";
 
     let isAddPlayerButtonPressed = false;
     let player = {
+        id: null,
         name: "",
         points: 0
     };
@@ -14,7 +15,7 @@
 
     const createNewPlayer = (e) => {
         PlayerStore.update((currentPlayers) => {
-            return [...currentPlayers, {name: player.name, points: player.points}]
+            return [...currentPlayers, {id: $PlayerStore.length + 1, name: player.name, points: player.points}]
         });
         isAddPlayerButtonPressed = !isAddPlayerButtonPressed;
         e.preventDefault();
