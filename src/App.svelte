@@ -1,6 +1,5 @@
 <script>
-    import Hero from "./components/Hero.svelte";
-    import Footer from "./components/Footer.svelte"
+    import { Hero, Footer } from "./components";
 </script>
 
 <div class="App">

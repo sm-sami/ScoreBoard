@@ -1,5 +1,5 @@
 <script>
-    export let buttonContent = ''
+    export let buttonContent
 </script>
 
 {#if buttonContent}
@@ -15,5 +15,9 @@
         background-color: var(--color-secondary);
         color: var(--text-color);
         font-weight: bold;
+    }
+
+    button:hover {
+        cursor: pointer;
     }
 </style>
