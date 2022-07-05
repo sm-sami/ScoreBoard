@@ -1,5 +1,5 @@
 <script>
-    import { AddPlayer, ScoreCard } from "./";
+    import { ScoreCard } from "./";
     import { PlayerStore } from "../stores";
 
     $: playerCount = $PlayerStore.length
