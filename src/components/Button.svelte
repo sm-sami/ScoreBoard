@@ -15,6 +15,7 @@
         background-color: var(--color-secondary);
         color: var(--text-color);
         font-weight: bold;
+        height: min-content;
     }
 
     button:hover {

@@ -6,7 +6,6 @@
 </script>
 
 <main>
-    <AddPlayer />
     {#if playerCount > 0}
         <div class="cards">
             {#each $PlayerStore as player (player.id)}
