@@ -1,12 +1,11 @@
 <script>
-    import { AddPlayer, ScoreCard } from "./";
+    import { ScoreCard } from "./";
     import { PlayerStore } from "../stores";
 
     $: playerCount = $PlayerStore.length
 </script>
 
 <main>
-    <AddPlayer />
     {#if playerCount > 0}
         <div class="cards">
             {#each $PlayerStore as player (player.id)}

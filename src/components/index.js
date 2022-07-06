@@ -1,3 +1,4 @@
+export { default as Topbar } from "./Topbar.svelte"
 export { default as Hero } from "./Hero.svelte";
 export { default as ScoreCard } from "./ScoreCard.svelte";
 export { default as AddPlayer } from "./AddPlayer.svelte";
